@@ -1,11 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assingment 5</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0/themes.css" rel="stylesheet" type="text/css" />
+    <title>Dev Board </title>
 </head>
-<body>
-    
+<body class="bg-[#F4F7FF]">
+<header class="max-w-7xl mx-auto">
+<nav class="flex justify-between bg-white p-5 rounded-3xl ">
+    <div class="flex items-center gap-3">
+        <img src="./assets/logo.png" alt="">
+        <p class="text-3xl">Dev <span class="font-semibold"> Board</span></p>
+    </div>
+    <div class="flex items-center gap-5">
+      <div class="px-5 py-2 flex items-center gap-3 bg-gray-200 rounded-full">
+        <img src="./assets/checkbox.png" alt="">
+        <p class="task-count">23</p>
+      </div>
+    <button onclick="toggleTheme()" class="p-2 ">
+        <img src="./assets/theme-btn.png" alt="">
+    </button>
+    </div>
+</nav>
+</header>
+<main class="max-w-7xl mx-auto">
+<section  class="grid grid-cols-12  gap-10">
+<div id="tasks" class="col-span-10 ">
+<div class="flex gap-10 justify-center my-5">
+<div class="flex items-center shadow-md gap-3 p-10 rounded-3xl bg-[#F4F7FF]">
+    <img src="./assets/checkbox.png" alt="">
+  <div>
+    <p class="text-xl">Task Assigned</p>
+    <p id="task-number" class=" text-2xl font-bold">5</p>
+  </div>
+</div>
+<div class="flex shadow-md rounded-2xl items-center gap-5 bg-gradient-to-l from-[#9BA8F8] via-[#6C7FFA] to-[#3752FD] p-5">
+    <img src="./assets/board.png" alt="">
+    <p class="text-xl text-white">Discover Something New <br> Today!</p>
+</div>
+<div class="flex items-center shadow-md gap-5 bg-[#F4F7FF] rounded-2xl p-5">
+  <div class="p-2 bg-white rounded-lg">
+    <img src="./assets/calender.png" alt="">
+  </div>
+<p>
+    Wed ,
+    <br>
+    Jul 28 2025 
+</p>
+</div>
+</div>
+<hr class="border-2 text-[#3751fd25]  border-dashed">
+<section class="grid gap-10 grid-cols-3">
+    <div class=" p-2 shadow-sm">
+        <div class="card-body">
+          <h2 class="card-title bg-white p-4 w-28 rounded-md ">ShopEase</h2>
+          <p id="task-title1" class="text-2xl text-[#00303C]">Fix Mobile Button Issue </p>
+          <p class="bg-white shadow-md p-2 rounded-lg">Debug using Chrome DevTools, check  for overlapping elements, and ensure onClick works properly
+            and ensure onClick works properly</p>
+            <div class="border-2 border-dashed text-[#3751fd3d]"></div>
+          <div class="card-actions justify-between">
+       <p class="font-semibold text-gray-500">
+        deadline <br>
+   <span class="text-gray-950">21 March 2025</span>
+       </p>
+       <button id="btn1" class="btn complete bg-[#3752FD] text-white">Completed</button>
+          </div>
+        </div>
+      </div>
+    <div class=" p-2 shadow-sm">
+        <div class="card-body">
+          <h2 class="card-title bg-white p-4 w-28 rounded-md ">CloudSync</h2>
+          <p id="task-title2" class="text-2xl text-[#00303C]">Add Dark Mode </p>
+          <p class="bg-white shadow-md p-2 rounded-lg">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+            <div class="border-2 border-dashed text-[#3751fd3d]"></div>
+          <div class="card-actions justify-between">
+       <p class="font-semibold text-gray-500">
+        deadline <br>
+   <span class="text-gray-950">21 March 2025</span>
+       </p>
+       <button id="btn2" class="btn complete bg-[#3752FD] text-white">Completed</button>
+          </div>
+        </div>
+      </div>
+    <div class=" p-2 shadow-sm">
+        <div class="card-body">
+          <h2 class="card-title bg-white p-4 w-28 rounded-md ">SwiftPay</h2>
+          <p id="task-title3" class="text-2xl text-[#00303C]">Optimize  Home page  </p>
+          <p class="bg-white shadow-md p-2 rounded-lg">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+            and ensure onClick works properly</p>
+            <div class="border-2 border-dashed text-[#3751fd3d]"></div>
+          <div class="card-actions justify-between">
+       <p class="font-semibold text-gray-500">
+        deadline <br>
+   <span class="text-gray-950">21 March 2025</span>
+       </p>
+       <button id="btn3" class="btn complete bg-[#3752FD] text-white">Completed</button>
+          </div>
+        </div>
+      </div>
+    <div class=" p-2 shadow-sm">
+        <div class="card-body">
+          <h2 class="card-title bg-white p-4 w-28 rounded-md ">Meta</h2>
+          <p id="task-title4" class="text-2xl text-[#00303C]">Add new emoji 🤲</p>
+          <p class="bg-white shadow-md p-2 rounded-lg">Debug using Chrome DevTools, check  for overlapping elements, and ensure onClick works properly
+            and ensure onClick works properly</p>
+            <div class="border-2 border-dashed text-[#3751fd3d]"></div>
+          <div class="card-actions justify-between">
+       <p class="font-semibold text-gray-500">
+        deadline <br>
+   <span class="text-gray-950">21 March 2025</span>
+       </p>
+       <button id="btn4" class="btn complete bg-[#3752FD] text-white">Completed</button>
+          </div>
+        </div>
+      </div>
+    <div class=" p-2 shadow-sm">
+        <div class="card-body">
+          <h2 class="card-title bg-white p-4 w-28 rounded-md ">Google LLC</h2>
+          <p class="text-2xl text-[#00303C]">Integrate OpenAI API </p>
+          <p id="task-title5" class="bg-white shadow-md p-2 rounded-lg">Debug using Chrome DevTools, check  for overlapping elements, and ensure onClick works properly
+            and ensure onClick works properly</p>
+            <div class="border-2 border-dashed text-[#3751fd3d]"></div>
+          <div class="card-actions justify-between">
+       <p class="font-semibold text-gray-500">
+        deadline <br>
+   <span class="text-gray-950">21 March 2025</span>
+       </p>
+       <button id="btn5" class="btn complete bg-[#3752FD] text-white">Completed</button>
+          </div>
+        </div>
+      </div>
+    <div class=" p-2 shadow-sm">
+        <div class="card-body">
+          <h2 class="card-title bg-white p-4 w-28 rounded-md ">Glassdoar</h2>
+          <p id="task-title6" class="text-2xl text-[#00303C]">Improve Job searching </p>
+          <p class="bg-white shadow-md p-2 rounded-lg">Debug using Chrome DevTools, check  for overlapping elements, and ensure onClick works properly
+            and ensure onClick works properly</p>
+            <div class="border-2 border-dashed text-[#3751fd3d]"></div>
+          <div class="card-actions justify-between">
+       <p class="font-semibold text-gray-500">
+        deadline <br>
+   <span class="text-gray-950">21 March 2025</span>
+       </p>
+       <button id="btn6" class="complete btn bg-[#3752FD] text-white">Completed</button>
+          </div>
+        </div>
+      </div>
+
+
+</section>
+
+
+
+</div>
+   
+  
+
+
+
+<div  class="col-span-2">
+<div class="flex items-center mt-10 gap-3">
+  <img src="./assets/activity.png" alt="">
+  <h3 class="text-xl text-[#00303C] font-bold">Activity Log</h3>
+  <br>
+</div>
+<button id="clear" class="btn bg-[#3752FD] m-5 text-white">Clear history</button>
+<div id="history" class="space-y-4">
+
+</div>
+</div>
+</section>
+</main>
+<footer>
+
+</footer>
+<script>
+  function toggleTheme() {
+
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      
+  
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+
+      document.documentElement.setAttribute('data-theme', newTheme);
+  }
+</script>
+<script src="./app.js">
+
+</script>
 </body>
 </html>
